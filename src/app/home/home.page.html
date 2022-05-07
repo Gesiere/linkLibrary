@@ -1,0 +1,34 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()" class="close-btn">
+        <ion-icon slot="end" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+    <ion-title class="ion-text-center">
+      User Details Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" slot="fixed">
+
+  <users-ui-overlapping-avatars [users]='ive'></users-ui-overlapping-avatars>
+ 
+<div class="homepage">
+  <ion-button (click)="openModal()" expand="block" fill="clear" shape="round">
+    Open Modal
+  </ion-button>
+
+ 
+  <users-ui-comfirmable-user-input [findFunction]="confirmableInputFindFunction" [showProgressFunction]="confirmableUserInputShowProgress"  [placeholder]="  confirmableUserInputPlaceholder" [confirmUserProp]="confirmableUserInputUserProp"></users-ui-comfirmable-user-input> 
+
+  <ion-button (click)="executeConfirmableInput()">
+    Click me
+  </ion-button>
+</div>
+
+ 
+</ion-content>
