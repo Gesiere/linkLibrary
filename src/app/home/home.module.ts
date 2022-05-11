@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { UserSearchPageModule, ComfirmableUserInputModule, UserDetailsPageModule , ComponentsModule as IonicNgUsersUIComponentsModule  } from 'ionic-ng-users-ui';
+import { UserSearchPageModule, ComfirmableUserInputModule, UserDetailsPageModule, ComponentsModule as IonicNgUsersUIComponentsModule } from 'ionic-ng-users-ui';
+
 
 
 
@@ -19,6 +20,7 @@ import { UserSearchPageModule, ComfirmableUserInputModule, UserDetailsPageModule
     ComfirmableUserInputModule,
     UserDetailsPageModule,
     IonicNgUsersUIComponentsModule,
+  
   ],
   declarations: [HomePage],
 })
