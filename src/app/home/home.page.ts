@@ -34,6 +34,16 @@ export class HomePage implements OnInit {
     },
   ];
 
+  avatar = [
+    {
+      url: 'https://randomuser.me/api/portraits/women/25.jpg',
+      title: 'Racheal',
+    },
+    {
+      url: 'https://randomuser.me/api/portraits/women/26.jpg',
+      title: 'Gesiere',
+    },
+  ];
   keys = ['name', 'address', 'email', 'username'];
 
   // users: USER[] = [
