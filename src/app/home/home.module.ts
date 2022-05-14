@@ -7,8 +7,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { UserSearchPageModule, ComfirmableUserInputModule, UserDetailsPageModule, ComponentsModule as IonicNgUsersUIComponentsModule } from 'ionic-ng-users-ui';
 
-import { IonicNgPicturesUiModule } from 'ionic-ng-pictures-ui';
-import { IonicNgSearchUiModule } from 'ionic-ng-search-ui';
+import { IonicNgPicturesUiModule, ComponentModule as AvatarModule } from 'ionic-ng-pictures-ui';
+import { IonicNgSearchUiModule, ComponentsModule as SearchModule } from 'ionic-ng-search-ui';
 
 
 @NgModule({
@@ -18,8 +18,10 @@ import { IonicNgSearchUiModule } from 'ionic-ng-search-ui';
     IonicModule,
     HomePageRoutingModule,
     UserSearchPageModule,
-    ComfirmableUserInputModule,
     UserDetailsPageModule,
+    AvatarModule,
+    SearchModule,
+    ComfirmableUserInputModule,
     IonicNgUsersUIComponentsModule,
     IonicNgPicturesUiModule,
     IonicNgSearchUiModule,

@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit, ViewChild, ViewChildren } from '@angular/core';
-import { BrowserTransferStateModule } from '@angular/platform-browser';
 import { ModalController } from '@ionic/angular';
-import { ConfirmableUserInputComponent as ConfirmableUserInputComponent, COMFIRMABLE_INPUT_FIND_FUNCTION, CONFIRMABLE_INPUT_SHOW_PROGRESS_FUNCTION, ImplUsersDataBroker, USER, UsersDataBroker, UsersDataBrokerServiceToken, UserSearchPageComponent, USER_FIND_PROP } from 'ionic-ng-users-ui';
+import { ConfirmableUserInputComponent as ConfirmableUserInputComponent, COMFIRMABLE_INPUT_FIND_FUNCTION, CONFIRMABLE_INPUT_SHOW_PROGRESS_FUNCTION, ImplUsersDataBroker, USER, UsersDataBrokerServiceToken, UserSearchPageComponent, USER_FIND_PROP } from 'ionic-ng-users-ui';
 import { IonListDataBroker } from 'vicky-ionic-ng-lib';
 import { LocalUsersDataBrokerService } from '../services/local-users-data-broker.service';
 
@@ -13,27 +12,6 @@ import { LocalUsersDataBrokerService } from '../services/local-users-data-broker
 })
 export class HomePage implements OnInit {
   searchValue: any;
-  ive = [
-    {
-      id: 1,
-      name: 'Gesiere Tarasele',
-      username: 'queen gesu',
-      email: 'm@gmail.com',
-      avatar: {
-        url: 'https://randomuser.me/api/portraits/women/25.jpg',
-      },
-    },
-    {
-      id: 2,
-      name: 'Racheal okechukwu',
-      email: 'u@gmail.com',
-      username: 'gesi gesu',
-      avatar: {
-        url: 'https://randomuser.me/api/portraits/women/20.jpg',
-      },
-    },
-  ];
-
   avatar = [
     {
       url: 'https://randomuser.me/api/portraits/women/25.jpg',
