@@ -12,7 +12,7 @@ import { LocalUsersDataBrokerService } from '../services/local-users-data-broker
 })
 export class HomePage implements OnInit {
   searchValue: any;
-  avatar = [
+  avatars = [
     {
       url: 'https://randomuser.me/api/portraits/women/25.jpg',
       title: 'Racheal',
