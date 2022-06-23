@@ -12,15 +12,13 @@ import { LocalUsersDataBrokerService } from '../services/local-users-data-broker
 })
 export class HomePage implements OnInit {
   searchValue: any;
+  url = 'https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&w=600'
   avatars = [
     {
       url: 'https://randomuser.me/api/portraits/women/25.jpg',
       title: 'Racheal',
     },
-    {
-      url: 'https://randomuser.me/api/portraits/women/26.jpg',
-      title: 'Gesiere',
-    },
+
   ];
   keys = ['name', 'address', 'email', 'username'];
 

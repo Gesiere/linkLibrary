@@ -15,7 +15,14 @@
 
 <ion-content [fullscreen]="true" slot="fixed">
 <!-- <search-ui-search-input-filter [filterEnabled]='true' ></search-ui-search-input-filter> -->
-  <pictures-ui-overlapping-avatars [avatars]='avatars'></pictures-ui-overlapping-avatars>
+  <pictures-ui-overlapping-avatars 
+  [avatars]='avatars' 
+  statusPosition="bottom left"  
+  [statusShape]="'round'"
+  [statusIndicatorType]="'url'"
+  [statusUrl]="url"
+  >
+</pictures-ui-overlapping-avatars>
  
 <div class="homepage">
   <ion-button (click)="openModal()" expand="block" fill="clear" shape="round">

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { ActionSheetController, AlertController, LoadingController, ToastController } from '@ionic/angular';
 import { CRUD, ListDataBrokerLoadOneOptions, ListDataBrokerLoadOptions, ListDataBrokerResult, TOAST_OPTIONS } from 'app-base-lib';
 import { ImplUsersDataBroker, UsersDataBrokerConfig, USER, UsersDataBrokerEvent, USER_FIND_PROP } from 'ionic-ng-users-ui';
 import {SEARCH_CONSTRAINT, SEARCH_FILTER} from 'ionic-ng-search-ui'
@@ -29,8 +29,8 @@ export class LocalUsersDataBrokerService extends ImplUsersDataBroker {
     }
   ]
 
-  constructor( toastCtrl:ToastController, loadingCtrl:LoadingController) {
-    super(toastCtrl as any,loadingCtrl as any,{perPage:PER_PAGE,append:false},'id');
+  constructor( actionSheetController: ActionSheetController, toastCtrl: ToastController, alertCtrl: AlertController, loadingCtrl: LoadingController) {
+    super(actionSheetController as any,toastCtrl as any, alertCtrl as any,loadingCtrl as any,{perPage:PER_PAGE,append:false});
   }
 
 private getUsersFromFakeServer(){

@@ -22,9 +22,6 @@ import { IonicNgSearchUiModule, ComponentsModule as SearchModule } from 'ionic-n
     AvatarModule,
     SearchModule,
     ComfirmableUserInputModule,
-    IonicNgUsersUIComponentsModule,
-    IonicNgPicturesUiModule,
-    IonicNgSearchUiModule,
   ],
   declarations: [HomePage],
 })
