@@ -42,15 +42,15 @@ export class HomePage implements OnInit {
 
   ];
 
-  // avatar:AVATAR = {
-  //   url: "https://randomuser.me/api/portraits/women/13.jpg",
-  //   title: 'Gloria',
-  //     status: {
-  //       type: AVATAR_STATUS_TYPE.COLOR,
-  //       statusPosition: AVATAR_POSITION.NE,
-  //       statusShape: AVATAR_SHAPE.CIRClE
-  //     }
-  // }
+  avatar:AVATAR = {
+    url: "https://randomuser.me/api/portraits/women/13.jpg",
+    title: 'Gloria',
+      status: {
+        type: AVATAR_STATUS_TYPE.COLOR,
+        statusPosition: AVATAR_POSITION.NE,
+        statusShape: AVATAR_SHAPE.CIRClE
+      }
+  }
   // users: USER[] = [
   //   {
   //     name: "Gesiere Tarasele",
