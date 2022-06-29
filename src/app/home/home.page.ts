@@ -2,6 +2,7 @@ import { Component, Inject, OnInit, ViewChild, ViewChildren } from '@angular/cor
 import { ModalController } from '@ionic/angular';
 import { ConfirmableUserInputComponent as ConfirmableUserInputComponent, COMFIRMABLE_INPUT_FIND_FUNCTION, CONFIRMABLE_INPUT_SHOW_PROGRESS_FUNCTION, ImplUsersDataBroker, USER, UsersDataBrokerServiceToken, UserSearchPageComponent, USER_FIND_PROP } from 'ionic-ng-users-ui';
 import { IonListDataBroker } from 'vicky-ionic-ng-lib';
+import { AVATAR, AVATAR_POSITION, AVATAR_SHAPE, AVATAR_STATUS_TYPE } from 'ionic-ng-pictures-ui'
 import { LocalUsersDataBrokerService } from '../services/local-users-data-broker.service';
 
 
@@ -18,10 +19,38 @@ export class HomePage implements OnInit {
       url: 'https://randomuser.me/api/portraits/women/25.jpg',
       title: 'Racheal',
     },
+    {
+      url: 'https://randomuser.me/api/portraits/women/20.jpg',
+      title: 'Racheal',
+    },
+    {
+      url: 'https://randomuser.me/api/portraits/women/10.jpg',
+      title: 'tracy',
+    },
+    {
+      url: 'https://randomuser.me/api/portraits/men/17.jpg',
+      title: 'homer',
+    },
+    {
+      url: 'https://randomuser.me/api/portraits/men/20.jpg',
+      title: 'blake',
+    },
+    {
+      url: 'https://randomuser.me/api/portraits/men/4.jpg',
+      title: 'carson',
+    },
 
   ];
-  keys = ['name', 'address', 'email', 'username'];
 
+  // avatar:AVATAR = {
+  //   url: "https://randomuser.me/api/portraits/women/13.jpg",
+  //   title: 'Gloria',
+  //     status: {
+  //       type: AVATAR_STATUS_TYPE.COLOR,
+  //       statusPosition: AVATAR_POSITION.NE,
+  //       statusShape: AVATAR_SHAPE.CIRClE
+  //     }
+  // }
   // users: USER[] = [
   //   {
   //     name: "Gesiere Tarasele",
@@ -44,7 +73,7 @@ export class HomePage implements OnInit {
 
   //   }
   // ]
-
+      
   filters = [
     { slug: 'name', label: 'School Name' },
     { slug: 'address', label: 'School Address' },

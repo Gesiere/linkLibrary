@@ -17,12 +17,15 @@
 <!-- <search-ui-search-input-filter [filterEnabled]='true' ></search-ui-search-input-filter> -->
   <pictures-ui-overlapping-avatars 
   [avatars]='avatars' 
-  statusPosition="bottom left"  
-  [statusShape]="'round'"
-  [statusIndicatorType]="'url'"
-  [statusUrl]="url"
+  
   >
 </pictures-ui-overlapping-avatars>
+<pictures-ui-avatar
+[avatar]='avatar' 
+
+>
+
+</pictures-ui-avatar>
  
 <div class="homepage">
   <ion-button (click)="openModal()" expand="block" fill="clear" shape="round">
