@@ -18,26 +18,32 @@ export class HomePage implements OnInit {
     {
       url: 'https://randomuser.me/api/portraits/women/25.jpg',
       title: 'Racheal',
+      // shape: AVATAR_SHAPE.CIRCLE,
     },
     {
       url: 'https://randomuser.me/api/portraits/women/20.jpg',
       title: 'Racheal',
+      // shape: AVATAR_SHAPE.ROUNDED_RECT,
     },
     {
       url: 'https://randomuser.me/api/portraits/women/10.jpg',
       title: 'tracy',
+      // shape: AVATAR_SHAPE.ROUNDED_RECT,
     },
     {
       url: 'https://randomuser.me/api/portraits/men/17.jpg',
       title: 'homer',
+      // shape: AVATAR_SHAPE.ROUNDED_RECT,
     },
     {
       url: 'https://randomuser.me/api/portraits/men/20.jpg',
       title: 'blake',
+      // shape: AVATAR_SHAPE.ROUNDED_RECT,
     },
     {
       url: 'https://randomuser.me/api/portraits/men/4.jpg',
       title: 'carson',
+      // shape: AVATAR_SHAPE.ROUNDED_RECT,
     },
 
   ];
@@ -45,11 +51,18 @@ export class HomePage implements OnInit {
   avatar:AVATAR = {
     url: "https://randomuser.me/api/portraits/women/13.jpg",
     title: 'Gloria',
+    // shape: AVATAR_SHAPE.ROUNDED_RECT,
       status: {
-        type: AVATAR_STATUS_TYPE.COLOR,
-        statusPosition: AVATAR_POSITION.NE,
-        statusShape: AVATAR_SHAPE.CIRClE
+        type: AVATAR_STATUS_TYPE.URL,
+        statusPosition: AVATAR_POSITION.NW,
+        statusShape: AVATAR_SHAPE.CIRCLE,
+        statusUrl: "https://randomuser.me/api/portraits/men/25.jpg"
       }
+  }
+
+  getAvatar(avatar: AVATAR){
+    console.log(avatar);
+    
   }
   // users: USER[] = [
   //   {
