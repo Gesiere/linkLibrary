@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActionSheetController, AlertController, LoadingController, ToastController } from '@ionic/angular';
 import { CRUD, ListDataBrokerLoadOneOptions, ListDataBrokerLoadOptions, ListDataBrokerResult, TOAST_OPTIONS } from 'app-base-lib';
-import { ImplUsersDataBroker, UsersDataBrokerConfig, USER, UsersDataBrokerEvent, USER_FIND_PROP } from 'ionic-ng-users-ui';
+import { ImplUsersDataBroker, UsersDataBrokerConfig, USER, UsersDataBrokerEvent, USER_FIND_PROP, USERLIST_BUTTON } from 'ionic-ng-users-ui';
 import {SEARCH_CONSTRAINT, SEARCH_FILTER} from 'ionic-ng-search-ui'
 import { timer } from 'rxjs';
 import {map, mapTo,take} from 'rxjs/operators';
@@ -32,6 +32,21 @@ export class LocalUsersDataBrokerService extends ImplUsersDataBroker {
   constructor( actionSheetController: ActionSheetController, toastCtrl: ToastController, alertCtrl: AlertController, loadingCtrl: LoadingController) {
     super(actionSheetController as any,toastCtrl as any, alertCtrl as any,loadingCtrl as any,{perPage:PER_PAGE,append:false});
   }
+
+  button:USERLIST_BUTTON[] = [
+    // {
+    //   id:1,
+    //   label:'delete',
+    //   slug:'pick-slug',
+    //   icon:'trash-outline'
+    // },
+    {
+      id:2,
+      label:'Share',
+      slug:'pi',
+      icon:'share-social-outline'
+    }
+  ]
 
 private getUsersFromFakeServer(){
 
@@ -88,7 +103,7 @@ const USERS:USER[] = [
               label: 'Users Search Page'
             },
             placeholder: 'Search',
-            buttonText: "Pick User",
+            button:this.button,
             searchFilters: this.searchFilters,
             userProps:['name','email','username'],
             filterEnabled: true,
@@ -106,6 +121,15 @@ const USERS:USER[] = [
             backBtn:' Go Back',
             userProps:['name','email', 'username'],
            
+          },
+
+          userPickListPage : {
+            title: {
+              label: "User Lists Page"
+            },
+            button : this.button,
+            userProps:['name','email', 'username']
+
           }
         }
       }

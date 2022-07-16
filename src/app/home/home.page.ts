@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ConfirmableUserInputComponent as ConfirmableUserInputComponent, COMFIRMABLE_INPUT_FIND_FUNCTION, CONFIRMABLE_INPUT_SHOW_PROGRESS_FUNCTION, ImplUsersDataBroker, USER, UsersDataBrokerServiceToken, UserSearchPageComponent, USER_FIND_PROP } from 'ionic-ng-users-ui';
+import { ConfirmableUserInputComponent as ConfirmableUserInputComponent, COMFIRMABLE_INPUT_FIND_FUNCTION, CONFIRMABLE_INPUT_SHOW_PROGRESS_FUNCTION, ImplUsersDataBroker, USER, UsersDataBrokerServiceToken, UserSearchPageComponent, USER_FIND_PROP, USERLIST_BUTTON } from 'ionic-ng-users-ui';
 import { IonListDataBroker } from 'vicky-ionic-ng-lib';
 import { AVATAR, AVATAR_POSITION, AVATAR_SHAPE, AVATAR_STATUS_TYPE } from 'ionic-ng-pictures-ui'
 import { LocalUsersDataBrokerService } from '../services/local-users-data-broker.service';
@@ -53,12 +53,56 @@ export class HomePage implements OnInit {
     title: 'Gloria',
     // shape: AVATAR_SHAPE.ROUNDED_RECT,
       status: {
-        type: AVATAR_STATUS_TYPE.URL,
-        statusPosition: AVATAR_POSITION.NW,
+        type: AVATAR_STATUS_TYPE.COLOR,
+        statusPosition: AVATAR_POSITION.NE,
         statusShape: AVATAR_SHAPE.CIRCLE,
         statusUrl: "https://randomuser.me/api/portraits/men/25.jpg"
       }
   }
+
+  button:USERLIST_BUTTON[] = [
+    // {
+    //   id:1,
+    //   label:'delete',
+    //   slug:'pick-slug',
+    //   icon:'trash-outline'
+    // },
+    {
+      id:2,
+      label:'Share',
+      slug:'pi',
+      icon:'share-social-outline'
+    }
+  ]
+
+  userProps = ['name','email', 'username']
+  users:USER[] = [
+
+    {
+      id:1,
+          name: "Gesiere Tarasele",
+          username: 'queen gesu',
+          email:"m@gmail.com",
+          avatar:{
+            url: "https://randomuser.me/api/portraits/women/25.jpg",
+            title: 'name'
+          }
+      },
+        {
+          id:2,
+          name: "Racheal okechukwu",
+          email:"u@gmail.com",
+          username: "gesi gesu",
+          avatar: {
+            url: "https://randomuser.me/api/portraits/women/2.jpg",
+            title: 'name'
+            
+          }
+      
+        },
+  ];
+
+  
 
   getAvatar(avatar: AVATAR){
     console.log(avatar);

@@ -5,7 +5,7 @@
         <ion-icon slot="end" name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
-
+    
     
     <ion-title class="ion-text-center">
       User Details Page
@@ -14,6 +14,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" slot="fixed">
+  <users-ui-user-pick-list [users]="users" [userProps]="userProps" [button]="button">
+  
+  </users-ui-user-pick-list>
 <!-- <search-ui-search-input-filter [filterEnabled]='true' ></search-ui-search-input-filter> -->
   <pictures-ui-overlapping-avatars 
   [avatars]='avatars' 
@@ -40,5 +43,5 @@
   </ion-button>
 </div>
 
- 
+<users-ui-user-picklist-page [users]="users"></users-ui-user-picklist-page>
 </ion-content>
