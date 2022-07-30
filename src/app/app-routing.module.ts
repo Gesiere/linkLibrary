@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'user-list',
+    loadChildren: () => import('ionic-ng-users-ui').then( m => m.UserListPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

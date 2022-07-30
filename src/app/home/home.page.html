@@ -1,10 +1,10 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <!-- <ion-buttons slot="start">
       <ion-button (click)="onClick()" class="close-btn">
         <ion-icon slot="end" name="close"></ion-icon>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons> -->
     
     
     <ion-title class="ion-text-center">
@@ -14,9 +14,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" slot="fixed">
-  <users-ui-user-pick-list [users]="users" [userProps]="userProps" [button]="button">
+  <users-ui-user-list [users]="users" [userProps]="userProps" [button]="button">
   
-  </users-ui-user-pick-list>
+  </users-ui-user-list>
 <!-- <search-ui-search-input-filter [filterEnabled]='true' ></search-ui-search-input-filter> -->
   <pictures-ui-overlapping-avatars 
   [avatars]='avatars' 
@@ -43,5 +43,7 @@
   </ion-button>
 </div>
 
-<users-ui-user-picklist-page [users]="users"></users-ui-user-picklist-page>
+<ion-button (click)="onClick()">
+  Open User List
+</ion-button>
 </ion-content>

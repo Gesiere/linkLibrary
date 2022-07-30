@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit, ViewChild, ViewChildren } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { ConfirmableUserInputComponent as ConfirmableUserInputComponent, COMFIRMABLE_INPUT_FIND_FUNCTION, CONFIRMABLE_INPUT_SHOW_PROGRESS_FUNCTION, ImplUsersDataBroker, USER, UsersDataBrokerServiceToken, UserSearchPageComponent, USER_FIND_PROP, USERLIST_BUTTON } from 'ionic-ng-users-ui';
 import { IonListDataBroker } from 'vicky-ionic-ng-lib';
 import { AVATAR, AVATAR_POSITION, AVATAR_SHAPE, AVATAR_STATUS_TYPE } from 'ionic-ng-pictures-ui'
@@ -154,7 +154,8 @@ export class HomePage implements OnInit {
   constructor(
     @Inject(UsersDataBrokerServiceToken)
     private usersDataBroker: LocalUsersDataBrokerService,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private navController: NavController
   ) {}
 
   confirmableInputFindFunction: COMFIRMABLE_INPUT_FIND_FUNCTION = async (
@@ -187,5 +188,12 @@ export class HomePage implements OnInit {
         alert('No user found');
       }
     });
+  }
+
+
+  onClick(){
+    this.navController.navigateForward(['/user-list']);
+    console.log('clicked');
+    
   }
 }
