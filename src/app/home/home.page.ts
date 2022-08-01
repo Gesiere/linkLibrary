@@ -181,6 +181,7 @@ export class HomePage implements OnInit {
 
     await modal.present();
   }
+  
   executeConfirmableInput() {
     this.confirmableUserInput.confirm().then((result) => {
       console.log('executeonfirmableInput() : ', result);
@@ -190,10 +191,8 @@ export class HomePage implements OnInit {
     });
   }
 
-
   onClick(){
     this.navController.navigateForward(['/user-list']);
     console.log('clicked');
-    
   }
 }

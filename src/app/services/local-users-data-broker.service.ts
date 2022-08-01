@@ -172,10 +172,14 @@ const USERS:USER[] = [
 
     const searchConstraint = options.search?.constraint;
 
-    const filterSlugs = Array.isArray(searchConstraint.filterSlugs) ? searchConstraint.filterSlugs : [] ;
+    if(!searchConstraint){
+      return { data : await this.getUsersFromFakeServer().toPromise() };
+    }
+
+    const filterSlugs = Array.isArray(searchConstraint?.filterSlugs) ? searchConstraint.filterSlugs : [] ;
 
     return {
-      data: await this.findByProps( searchConstraint.token , filterSlugs.map( slug => slug == 'name-s' ? 'name' : slug == 'email-s' ? 'email' : 'username' ) , 
+      data: await this.findByProps( searchConstraint?.token , filterSlugs.map( slug => slug == 'name-s' ? 'name' : slug == 'email-s' ? 'email' : 'username' ) , 
         options.page , options.perPage )
     };
 
